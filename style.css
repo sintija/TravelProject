@@ -1,0 +1,360 @@
+/* GLOBAL STYLES */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* 1rem 10px*/
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 4.8rem;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+h4,
+h5,
+h5 {
+    font-size: 2.8rem;
+}
+
+button {
+    padding: 2rem 6rem;
+    background: #4c6e97;
+    color: #fff;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+}
+
+button:hover {
+    background: #27394e;
+}
+
+
+/*NAV SECTION WITH HERO*/
+
+.main-head {
+    background-color: #131c27;
+    color: #fff;
+    top: 0;
+    position: sticky;
+    z-index: 100;
+}
+
+nav {
+    min-height: 10vh;
+    padding: 2rem;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+#logo {
+    flex: 2 1 40rem;
+    font-family: 'Pattaya', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.1rem;
+}
+
+.hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), transparent), url("./images/img/landing-page.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h3 {
+    padding: 5rem;
+}
+
+
+/*BENIFITS SECTION*/
+
+#locations {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url(./images/img/new-york-page.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.locations-head {
+    width: 90%;
+    margin: auto;
+}
+
+.locations-head h2 {
+    padding: 1rem 0rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5rem;
+}
+
+
+/* Add a gradient to the text */
+
+.locations-head h3 {
+    padding: 4rem 0rem;
+    background: linear-gradient(#131c27, #663b34);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.cloud {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    /* z-index: -1; */
+}
+
+.moving-cloud1 {
+    animation: cloudAnimation 3.7s infinite alternate ease-in-out;
+}
+
+.moving-cloud2 {
+    top: 20%;
+    opacity: 0.5;
+    z-index: -10;
+    animation: cloudAnimation 3.8s infinite alternate ease-in-out;
+}
+
+
+/*Animation Properties  example 
+1. Create a keyframme 
+2. Add to the element you want you animate 
+animation: cloudAnimation 2s infinite alternate 2s (delay) 
+*/
+
+@keyframes cloudAnimation {
+    from {
+        transform: translate(10%, -10%);
+    }
+    to {
+        transform: translate(0%, 0%);
+    }
+}
+
+
+/*The benefits section*/
+
+.benefits-head {
+    background: #343c44;
+    color: white;
+    padding: 3rem;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.benefits-head h3 {
+    padding: 1rem;
+}
+
+.cards {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    min-height: 70vh;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    /*x, y and blur color*/
+    box-shadow: 0px 10px 10px rgba(109, 80, 80, 0.1), 0px 20px 20px rgba(109, 80, 80, 0.1);
+    /*size and the width */
+    flex: 1 1 25rem;
+    text-align: center;
+    min-height: 30vh;
+    margin: 5rem 2rem;
+}
+
+.cards img {
+    max-width: 15%;
+    margin: 2rem;
+}
+
+.card h4,
+.card p {
+    padding: 1rem;
+}
+
+.card-icon {
+    background: #343c44;
+}
+
+
+/*Contact section*/
+
+#contact {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent), url(./images/img/contact-mountain.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    background: rgba(19, 28, 39, 0.8);
+    width: 60%;
+    color: white;
+    border-radius: 20px;
+}
+
+.form-head {
+    text-align: center;
+    padding: 4rem;
+}
+
+.name-form,
+.email-form {
+    padding: 3rem;
+    text-align: center;
+}
+
+.form-wrapper label {
+    margin: 0 3rem;
+}
+
+.form-wrapper button {
+    width: 100%;
+    padding: 2rem;
+    margin-top: 8rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.form-wrapper input {
+    padding: 1rem 3rem;
+}
+
+
+/*Footer */
+
+footer {
+    color: white;
+    background: rgba(19, 28, 39, 1);
+}
+
+.footer-wrapper {
+    display: flex;
+    padding: 2rem;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    min-height: 10vh;
+    flex-wrap: wrap;
+}
+
+footer h5 {
+    flex: 1 1 40rem;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    flex: 1 1 40rem;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+button:focus {
+    background: #2c3f57;
+    outline-style: solid;
+}
+
+
+/*Media Queries*/
+
+@media screen and (max-width: 932px) {
+    html {
+        font-size: 45%;
+    }
+    nav {
+        text-align: center;
+    }
+    #logo {
+        padding: 2rem;
+    }
+    .cloud {
+        height: 50rem;
+        pointer-events: none;
+    }
+    .moving-cloud2 {
+        z-index: -1;
+    }
+    .moving-cloud2 {
+        z-index: -2;
+    }
+    .locations-head h3 {
+        background: rgba(19, 28, 39, 0.5);
+        -webkit-text-fill-color: white;
+        padding: 2rem;
+    }
+    .form-wrapper {
+        width: 90%;
+    }
+    footer {
+        text-align: center;
+    }
+    footer h5 {
+        padding-bottom: 2rem;
+    }
+}
